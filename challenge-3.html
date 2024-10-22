@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge-3: Escape The Matrix</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #0f0;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 2.5em;
+        align-items: center;
+      }
+      p {
+        font-size: 1.2em;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid #0f0;
+        border-radius: 5px;
+        background-color: #222;
+        color: #fff;
+      }
+      button {
+        background-color: #0f0;
+        color: #000000;
+        padding: 10px;
+        border: none;
+        margin-left: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+        max-width: 80px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      button:hover {
+        background-color: #0f0;
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      #message {
+        color: rgb(255, 0, 0);
+        text-align: center;
+        margin-top: 10px;
+      }
+      #hint {
+        color: #ff0000;
+        margin-top: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Challenge-3: Escape The Matrix</h1>
+    <p>
+      The final level has arrived! Only the bravest souls will unlock their
+      destiny!
+    </p>
+    <img
+      src="https://i.ytimg.com/vi/geKIQ0CTsjc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB89QQxrqsG7vYW-QjyGRVViuHmhA"
+      alt="img-5"
+      type="jpg"
+    /><br />
+    <p>What color is our bugatti?</p>
+    <input
+      type="text"
+      id="codeInput"
+      placeholder="Correct the secret code here"
+    />
+    <button onclick="checkCode()" class="button">Submit</button>
+
+    <button id="hintButton" class="button" onclick="showHint()">Hint</button>
+    <p id="message"></p>
+    <p id="hint"></p>
+
+    <script>
+      function checkCode() {
+        const userCode = document.getElementById("codeInput").value.trim();
+        const correctCode = "coppery"; 
+
+        if (userCode === correctCode) {
+          window.location.href = "real-world.html"; 
+        } else {
+          document.getElementById("message").innerText =
+            "Incorrect code! Try again.";
+        }
+      }
+
+      function showHint() {
+        const hintText =
+          "Don't Be Basic: Research the Bugatti and discover why the color matters. It’s not just a car; it’s a lifestyle.";
+        document.getElementById("hint").innerText = hintText;
+        document.getElementById("hint").style.display = "block"; 
+      }
+    </script>
+  </body>
+</html>

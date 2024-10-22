@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge-2: Unlock Your Greatness</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #0f0;
+        padding: 20px;
+      }
+      pre {
+        background-color: #111;
+        padding: 15px;
+        border-radius: 5px;
+        overflow: auto;
+      }
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+      p {
+        font-size: 1.2em;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        border: 1px solid #0f0;
+        border-radius: 5px;
+        background-color: #222;
+        color: #fff;
+      }
+      button {
+        background-color: #0f0;
+        color: #000000;
+        padding: 10px;
+        border: none;
+        margin: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+        max-width: 100px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      button:hover {
+        background-color: #0f0;
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      #message {
+        color: rgb(255, 0, 0);
+        text-align: center;
+        margin-top: 10px;
+      }
+      #hint {
+        color: #ff0000;
+        margin-top: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Challenge-2: Unlock Your Greatness</h1>
+    <p>
+      The journey continues, brave soul! In Challenge-2, you need to unlock your
+      true potential. Enter the secret code and step into Challenge-3, the final
+      level where the truth of the Matrix will be revealed!
+    </p>
+
+    <img
+      src="https://dims.apnews.com/dims4/default/98c7c25/2147483647/strip/true/crop/3343x2229+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F23%2F2a%2Fc195983e0f48a7e07f43883f1803%2Fc4ddb5cfc45448f2b4827af26a565e49"
+      alt="img-3"
+      type="jpg"
+      width="800px"
+      height="400"
+    /><br />
+
+    <input
+      type="text"
+      id="codeInput"
+      placeholder="Enter the secret code here"
+    />
+    <button onclick="checkCode()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+      function checkCode() {
+        const userCode = document.getElementById("codeInput").value;
+        const correctCode = "There is no joy without pain.";
+        if (userCode === correctCode) {
+          window.location.href = "challenge-3.html";
+        } else {
+          document.getElementById("message").innerText =
+            "Incorrect code! Try again.";
+        }
+      }
+    </script>
+  </body>
+</html>

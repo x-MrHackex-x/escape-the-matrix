@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge-1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #0f0;
+        padding: 20px;
+      }
+      pre {
+        background-color: #111;
+        padding: 15px;
+        border-radius: 5px;
+        overflow: auto;
+      }
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+      p {
+        font-size: 1.2em;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        border: 1px solid #0f0;
+        border-radius: 5px;
+        background-color: #222;
+        color: #fff;
+      }
+      button {
+        background-color: #0f0;
+        color: #000000;
+        padding: 10px;
+        border: none;
+        margin: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+        max-width: 100px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      button:hover {
+        background-color: #0f0;
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      #message {
+        color: rgb(255, 0, 0);
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Challenge-1: Seek the Secret Code</h1>
+    <p>
+      Welcome, brave challenger! You stand at the threshold of truth. Your
+      mission is clear: uncover the hidden code concealed within the shadows.<br />Dare
+      to dive deep, for only the bold will escape the Matrix!
+    </p>
+    <img
+      src="https://media.gq-magazine.co.uk/photos/63f761883f00825bbb9921e8/3:2/w_1200,h_800,c_limit/Andrew-tate-2.jpg"
+      alt="img-2"
+      type="jpg"
+      width="800px"
+      height="400"
+    />
+    <br />
+    <input type="text" id="codeInput" placeholder="Enter the Hidden Code" />
+    <button onclick="checkCode()">Submit</button>
+    <p id="message"></p>
+
+    <!-- Br3ath A1r! -->
+
+    <script>
+      function checkCode() {
+        const userCode = document.getElementById("codeInput").value;
+        const correctCode = "Br3ath A1r!";
+
+        if (userCode === correctCode) {
+          window.location.href = "challenge-2.html";
+        } else {
+          document.getElementById("message").innerText =
+            "Incorrect code! Try again.";
+        }
+      }
+    </script>
+  </body>
+</html>
